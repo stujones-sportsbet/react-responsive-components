@@ -4,15 +4,15 @@ Creates media queries at provided breakpoints, allowing various components to ta
 
 # Why?
 
-When setting up a responsive layout, it's would be nice to have a simple way to get each component in the app to know about what the current form factor is, i.e. is the device small like a mobile or wide like a desktop? This library will create the media queries with listeners needed to do this, based on a simple object.
+When setting up a responsive layout, it would be nice to have a simple way to get each component in the app to know about what the current form factor is, i.e. is the device small like a mobile or wide like a desktop? This library will create the media queries with listeners needed to do this, based on a simple object.
 
 # How does it work?
 
-You use two different components, one is the <ResponsiveRoot> and the other is <Responsive>. Wrap something near the Root component of your app with <ResponsiveRoot>. Then wrap your individual components that need to respond to screen size changes with <Responsive>.
+You use two different components, one is the `<ResponsiveRoot>` and the other is `<Responsive>`. Wrap something near the Root component of your app with `<ResponsiveRoot>`. Then wrap your individual components that need to respond to screen size changes with `<Responsive>`.
 
-The "name" of the currentBreakpoint becomes the responsiveKey prop. <Responsive> will pass this responsiveKey to all its children.
+The "name" of the currentBreakpoint becomes the responsiveKey prop. `<Responsive>` will pass this responsiveKey to all its children.
 
-The magic happens by using the same breakpoint objects in <ResponsiveRoot> as in <Responsive>. You can use responsiveHoC to mix your pre-defined breakpoints object into both components. Better yet, you can connect both of these to a redux store, so the <Responsive> wrappers will automatically get notified with the new breakpoint when the form factor has changed.
+The magic happens by using the same breakpoint objects in `<ResponsiveRoot>` as in `<Responsive>`. You can use responsiveHoC to mix your pre-defined breakpoints object into both components. Better yet, you can connect both of these to a redux store, so the `<Responsive>` wrappers will automatically get notified with the new breakpoint when the form factor has changed.
 
 # Example
 
